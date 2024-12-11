@@ -1,0 +1,16 @@
+import math
+l=[]
+for i in range(32,99):
+    sq=i*i
+    l.append(sq)
+for i in l:
+    digit=1
+    j=i
+    while(i>0):
+        digit=i%2
+        if digit!=0:
+            break;
+        else:
+            i=i//10
+    if digit==0:
+        print(j)
