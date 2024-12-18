@@ -1,0 +1,17 @@
+class rectangle:
+    def __init__(s,l,b):
+        s.l=l
+        s.b=b
+        s.a=l*b
+        s.p=2*(l+b)
+rect1=rectangle(5,10)
+rect2=rectangle(7,8)
+print("Area of rect1:",rect1.a)
+print("perimeter of rect1:",rect1.p)
+print("Area of rect2:",rect2.a)
+print("perimeter of rect2:",rect2.p)
+if rect1.a<rect2.a:
+    print("rect2 has larger area.")
+else:
+    print("rect1 has largerv area.")
+    
