@@ -1,0 +1,7 @@
+n=input("enter a list of words comma separated:")
+s=list(n.split(','))
+count=0
+for word in s:
+    if len(word) > count:
+        count=len(word)
+print(count)
