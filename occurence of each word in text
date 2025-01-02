@@ -1,0 +1,11 @@
+n=input("enter a line of text:")
+words=n.split()
+c={}
+for word in words:
+    if word in c:
+        c[word]+=1
+    else:
+        c[word]=1
+print("\n word occurences:")
+for word,count in c.items():
+    print(word,count)
