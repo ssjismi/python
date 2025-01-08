@@ -125,3 +125,41 @@ print(f"Cuboid Perimeter: {cuboid.perimeter(length, width, height)}")
 # Sphere
 print(f"Sphere Area: {sphere.area(radius)}")
 print(f"Sphere Perimeter: {sphere.perimeter(radius)}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from graphics import *
+import graphics.rectangle
+import graphics.circle
+from graphics.threegraphics import cuboid
+from graphics.threegraphics import sphere
+le=5
+wi=3
+print(f"Rectangle Area: {graphics.rectangle.area(le, wi)}")
+print(f"Rectangle Perimeter: {graphics.rectangle.perimeter(le, wi)}")
+
+# Circle
+radius = 7
+print(f"Circle Area: {graphics.circle.area(radius)}")
+print(f"Circle Perimeter: {graphics.circle.perimeter(radius)}")
+
+# Cuboid
+height = 4
+print(f"Cuboid Area: {graphics.threegraphics.cuboid.area(le, wi, h)}")
+print(f"Cuboid Perimeter: {graphics.threegraphics.cuboid.perimeter(le, wi, h)}")
+
+# Sphere
+print(f"Sphere Area: {graphics.threegraphics.sphere.area(radius)}")
+print(f"Sphere Perimeter: {graphics.threegraphics.sphere.perimeter(radius)}")
