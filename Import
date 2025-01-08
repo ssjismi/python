@@ -1,0 +1,127 @@
+# graphics/rectangle.py
+
+def area(length, width):
+    """Returns the area of the rectangle."""
+    return length * width
+
+def perimeter(length, width):
+    """Returns the perimeter of the rectangle."""
+    return 2 * (length + width)
+
+
+# graphics/circle.py
+import math
+
+def area(radius):
+    """Returns the area of the circle."""
+    return math.pi * radius * radius
+
+def perimeter(radius):
+    """Returns the perimeter (circumference) of the circle."""
+    return 2 * math.pi * radius
+
+
+# graphics/3D-graphics/cuboid.py
+
+def area(length, width, height):
+    """Returns the surface area of the cuboid."""
+    return 2 * (length * width + width * height + height * length)
+
+def perimeter(length, width, height):
+    """Returns the perimeter of the cuboid (sum of edge lengths)."""
+    return 4 * (length + width + height)
+
+
+# graphics/3D-graphics/sphere.py
+import math
+
+def area(radius):
+    """Returns the surface area of the sphere."""
+    return 4 * math.pi * radius * radius
+
+def perimeter(radius):
+    """Returns the perimeter (circumference) of the sphere (circle on the sphere's equator)."""
+    return 2 * math.pi * radius
+
+
+# Main program
+
+print("Program using Full Import:")
+
+# Full Import
+import graphics.rectangle
+import graphics.circle
+import graphics.3D-graphics.cuboid
+import graphics.3D-graphics.sphere
+
+# Rectangle
+length = 5
+width = 3
+print(f"Rectangle Area: {graphics.rectangle.area(length, width)}")
+print(f"Rectangle Perimeter: {graphics.rectangle.perimeter(length, width)}")
+
+# Circle
+radius = 7
+print(f"Circle Area: {graphics.circle.area(radius)}")
+print(f"Circle Perimeter: {graphics.circle.perimeter(radius)}")
+
+# Cuboid
+height = 4
+print(f"Cuboid Area: {graphics.3D-graphics.cuboid.area(length, width, height)}")
+print(f"Cuboid Perimeter: {graphics.3D-graphics.cuboid.perimeter(length, width, height)}")
+
+# Sphere
+print(f"Sphere Area: {graphics.3D-graphics.sphere.area(radius)}")
+print(f"Sphere Perimeter: {graphics.3D-graphics.sphere.perimeter(radius)}")
+
+
+# Program using Selective Import:
+
+print("\nProgram using Selective Import:")
+
+from graphics.rectangle import area as rect_area, perimeter as rect_perimeter
+from graphics.circle import area as circ_area, perimeter as circ_perimeter
+from graphics.3D-graphics.cuboid import area as cuboid_area, perimeter as cuboid_perimeter
+from graphics.3D-graphics.sphere import area as sphere_area, perimeter as sphere_perimeter
+
+# Rectangle
+print(f"Rectangle Area: {rect_area(length, width)}")
+print(f"Rectangle Perimeter: {rect_perimeter(length, width)}")
+
+# Circle
+print(f"Circle Area: {circ_area(radius)}")
+print(f"Circle Perimeter: {circ_perimeter(radius)}")
+
+# Cuboid
+print(f"Cuboid Area: {cuboid_area(length, width, height)}")
+print(f"Cuboid Perimeter: {cuboid_perimeter(length, width, height)}")
+
+# Sphere
+print(f"Sphere Area: {sphere_area(radius)}")
+print(f"Sphere Perimeter: {sphere_perimeter(radius)}")
+
+
+# Program using Aliases:
+
+print("\nProgram using Aliases:")
+
+import graphics.rectangle as rect
+import graphics.circle as circ
+import graphics.3D-graphics.cuboid as cuboid
+import graphics.3D-graphics.sphere as sphere
+
+# Rectangle
+print(f"Rectangle Area: {rect.area(length, width)}")
+print(f"Rectangle Perimeter: {rect.perimeter(length, width)}")
+
+# Circle
+print(f"Circle Area: {circ.area(radius)}")
+print(f"Circle Perimeter: {circ.perimeter(radius)}")
+
+# Cuboid
+print(f"Cuboid Area: {cuboid.area(length, width, height)}")
+print(f"Cuboid Perimeter: {cuboid.perimeter(length, width, height)}")
+
+# Sphere
+print(f"Sphere Area: {sphere.area(radius)}")
+print(f"Sphere Perimeter: {sphere.perimeter(radius)}")
